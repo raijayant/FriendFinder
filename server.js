@@ -11,6 +11,7 @@ const routerApi = require('./app/routing/apiRoutes');
 //to mount the router to the app
 app.use('/survey', router);
 app.use(routerApi);
+app.use(express.static('public'))
 
 const PORT = process.env.PORT || 3000;
 
