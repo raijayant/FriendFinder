@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Survey</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <title>Friend Finder Survey</title>
 </head>
 <body>
     
@@ -15,7 +16,6 @@
     
           <h1>Survey Questions</h1>
           <hr>
-          <a href="/survey"></a>
     
                           <!--divs for name and photo input--> 
            <div class="card-header"> 
@@ -23,7 +23,7 @@
                 <form>
                     <div class="form-group">
                       <label for="name"><strong>Name (Required)</strong></label>
-                      <input type="name" class="form-control" id="examplename" aria-describedby="name" placeholder="Enter name">
+                      <input type="name" class="form-control" id="name" aria-describedby="name" placeholder="Enter name">
                     </div>
 
                     <!--Input link-->
@@ -205,7 +205,7 @@
                   </div>
 
                   
-                  <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+                  <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><span class="glyphicon glyphicon-check"></span></i>
                         Submit
                   </button>
                       
@@ -213,6 +213,42 @@
              
 </div>
 </div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Congratulations</h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    //on click of submit button, ajax on click
+    
+    document.getElementById('submit').onclick('click', function () {
+
+      var newFriend = {
+				'name': document.getElementById('name').val().trim(),
+				'photo': document.getElementById('basic-url').val().trim(),
+        'scores': [document.querySelectorAll('#q1', '#q2', '#q3', '#q4', '#q5', '#q6', '#q7', '#q8', '#q9', '#q10').val()]
+       
+			};
+
+    });
+    document.getElementById('submit').onclick('click', function () {
+
+      
+      
+    });
+	</script>
     
   
     
