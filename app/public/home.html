@@ -7,7 +7,8 @@
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script   src="https://code.jquery.com/jquery-3.0.0.js"   integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo="   crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.js"   integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo="   crossorigin="anonymous"></script>
+    
 </head>
 <body>
     <div id="wrapper">
@@ -18,11 +19,16 @@
             <h3>Answer a few basic questions.</h3>
             <h4>Then find the friend with the greatest compatibility!</h4>
         <hr>
-        <a href="/survey"><button class="btn btn-danger btn-lg"><span class="fa fa-eye"></span>Go to Survey</button></a>
+        <a class="btn btn-danger btn-lg" href="/survey" role="button"><span class="fa fa-eye"></span>Go to Survey</a>
         
     </div>
 </div>
 </div>
-    
+<footer class="footer">
+        <div class="container">
+          
+          <p><a href="/api/friends" id="link">API Friends List</a> | <a href="https://github.com/jayantrai/FriendFinder" id="link">GitHub Repo</a></p>
+        </div>
+      </footer>
 </body>
 </html>

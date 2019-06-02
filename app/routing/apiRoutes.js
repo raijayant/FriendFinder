@@ -1,18 +1,26 @@
-const express = require('express');
-const routerApi = express.Router();
-const friendList = require('../data/friends.js');
 
-routerApi.get('/api/friends', function (req, res) {
+var friendList = require('../data/friends.js');
+
+var bodyParser = require('body-parser');
+var path = require('path');
+
+
+module.exports = function (app) {
+    app.get('/api/friends', function (req, res) {
 
     res.json(friendList);
 });
 
-routerApi.post('/api/friends', function (req, res) {
 
-    res.json({
-        message: "POST"
 
-    });
-});
 
-module.exports = routerApi;
+app.post('/api/friends', function (req, res) {
+    
+    //to store sum of users score
+    var newUserTotalScore = sum(req.body.scores);
+    
+
+    var friendTotal = 0;
+    
+})
+};
